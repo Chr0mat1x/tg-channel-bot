@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: tg-channel-bot
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        value: "7798757769"
+      - key: CHANNEL_ID
+        value: "-1004252105738"
+      - key: AUTO
+        value: "1"
+      - key: SLOTS
+        value: "10:00,15:00,19:00"
+      - key: TZ
+        value: "Asia/Dubai"
+      - key: WEBHOOK_SECRET
+        generateValue: true
