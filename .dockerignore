@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+bot.db
+bot.log
+console.log
+supervisor.log
+*.old.log
+.env
